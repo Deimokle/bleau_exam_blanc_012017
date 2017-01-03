@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Bienvenue</h1>
+
+    <p>
+    Veuillez indiquer le nombre de chambres que vous souhaitez réserver, nous vous dirons quels hôtels sont disponibles
+</p>
+    <div class="row">
+        <div class="col offset-s4 s3">
+            <form action="{{ path('hotels') }}" method="POST">
+                <input type="number" name="demande">
+                <input type="Submit" name="Enregistrer">
+            </form>
+        </div>
+    </div>
+{% endblock %}

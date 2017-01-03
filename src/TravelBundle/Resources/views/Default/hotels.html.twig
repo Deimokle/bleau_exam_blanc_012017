@@ -1,0 +1,11 @@
+<h1>Voici la liste des hôtels disponibles</h1>
+
+<div class="row">
+    {% for hotels in hotels %}
+        {% if hotels.capacity > demande %}
+            <div class="col s12">
+                <a href="{{ path('hotel_show', { 'id': hotels.id }) }}">{{ hotels.name }}</a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

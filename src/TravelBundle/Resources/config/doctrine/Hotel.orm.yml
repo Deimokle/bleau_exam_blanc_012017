@@ -1,0 +1,36 @@
+TravelBundle\Entity\Hotel:
+    type: entity
+    table: null
+    repositoryClass: TravelBundle\Repository\HotelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        stars:
+            type: integer
+        name:
+            type: string
+            length: 255
+        address:
+            type: string
+            length: 255
+        zipcode:
+            type: integer
+        city:
+            type: string
+            length: 255
+        phone:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        website:
+            type: string
+            length: 255
+        capacity:
+            type: integer
+    lifecycleCallbacks: {  }
