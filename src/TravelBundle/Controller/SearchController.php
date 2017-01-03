@@ -21,8 +21,8 @@ class SearchController
 
         $hotel = $em->getRepository('TravelBundle:Hotel')->findAll();
 
-        return $this->render('', array(
-            'objets' => $objets,
+        return $this->render('@Travel/Default/index.html.twig', array(
+            'hotels' => $hotels,
         ));
     }
 }
