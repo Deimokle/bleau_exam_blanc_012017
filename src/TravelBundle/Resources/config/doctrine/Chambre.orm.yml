@@ -1,0 +1,11 @@
+TravelBundle\Entity\Chambre:
+    type: entity
+    table: null
+    repositoryClass: TravelBundle\Repository\ChambreRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

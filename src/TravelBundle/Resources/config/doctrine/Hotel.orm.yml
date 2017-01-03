@@ -1,0 +1,11 @@
+TravelBundle\Entity\Hotel:
+    type: entity
+    table: null
+    repositoryClass: TravelBundle\Repository\HotelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

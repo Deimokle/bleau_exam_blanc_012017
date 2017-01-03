@@ -1,0 +1,12 @@
+travel_hotel:
+    resource: "@TravelBundle/Resources/config/routing/hotel.yml"
+    prefix:   /hotel
+
+travel_chambre:
+    resource: "@TravelBundle/Resources/config/routing/chambre.yml"
+    prefix:   /chambre
+
+
+travel_homepage:
+    path:     /
+    defaults: { _controller: TravelBundle:Default:index }

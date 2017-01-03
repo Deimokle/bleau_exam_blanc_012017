@@ -1,0 +1,12 @@
+chambre_index:
+    path:     /
+    defaults: { _controller: "TravelBundle:Chambre:index" }
+    methods:  GET
+
+chambre_show:
+    path:     /{id}/show
+    defaults: { _controller: "TravelBundle:Chambre:show" }
+    methods:  GET
+
+
+
