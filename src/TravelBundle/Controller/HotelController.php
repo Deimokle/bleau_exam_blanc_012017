@@ -35,7 +35,7 @@ class HotelController extends Controller
     public function showAction(Hotel $hotel)
     {
 
-        return $this->render('hotel/show.html.twig', array(
+        return $this->render('TravelBundle:hotel:show.html.twig', array(
             'hotel' => $hotel,
         ));
     }
