@@ -24,7 +24,6 @@ class AlgoController extends Controller
 		}
 		return $tab;
     }
-
     // Exercice 2
     public function panier($tab)
     {
