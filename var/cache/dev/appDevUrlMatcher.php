@@ -100,6 +100,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // travel_homepage
+        if (rtrim($pathinfo, '/') === '/travel') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'travel_homepage');
+            }
+
+            return array (  '_controller' => 'TravelBundle\\Controller\\DefaultController::indexAction',  '_route' => 'travel_homepage',);
+        }
+
         // exam_blanc_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
