@@ -1,0 +1,31 @@
+TravelBundle\Entity\Room:
+    type: entity
+    table: null
+    repositoryClass: CalendarBundle\Repository\RoomRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        room_number:
+            type: string
+            length: 255
+        capacity:
+            type: integer
+        book:
+            type: integer
+        website:
+            type: string
+            length: 255
+        capacity:
+            type: integer
+
+    manyToOne:
+        hotel:
+          targetEntity: Hotel
+          joinColumn:
+            name: hotel_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }
