@@ -16,13 +16,13 @@ use TravelBundle\Entity\Room;
 class SearchController
 {
 
-    public function indexAction{
+    public function indexAction(){
         $em = $this->getDoctrine()->getManager();
 
         $hotel = $em->getRepository('TravelBundle:Hotel')->findAll();
 
         return $this->render('@Travel/Default/index.html.twig', array(
-            'hotels' => $hotels,
+            'hotel' => $hotel,
         ));
     }
 }

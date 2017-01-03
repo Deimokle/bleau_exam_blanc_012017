@@ -7,17 +7,12 @@
          <div class="col s12">
             <table>
                <thead>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>Nom de l'hotel</td>
+                  <td>Capacité d'accueil</td>
+                  <td>Nb d'étoiles</td>
                </thead>
                <tbody>
-               {% for hotels in hotels %}
+               {% for hotels in hotel %}
                   <td>{{ hotel.name }}</td>
                   <td>{{ hotel.capacity }}</td>
                   <td>{{ hotel.stars }}</td>

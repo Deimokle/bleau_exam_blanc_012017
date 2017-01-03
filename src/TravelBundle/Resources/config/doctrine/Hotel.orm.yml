@@ -1,7 +1,7 @@
 TravelBundle\Entity\Hotel:
     type: entity
     table: null
-    repositoryClass: CalendarBundle\Repository\HotelRepository
+#    repositoryClass: CalendarBundle\Repository\HotelRepository
     id:
         id:
             type: integer
