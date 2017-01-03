@@ -16,12 +16,6 @@ TravelBundle\Entity\Room:
             type: integer
         book:
             type: integer
-        website:
-            type: string
-            length: 255
-        capacity:
-            type: integer
-
     manyToOne:
         hotel:
           targetEntity: Hotel
