@@ -3,11 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-            {% block stylesheets %}{% endblock %}
+            {% block stylesheets %}
+                <link type="text/css" rel="stylesheet" href="{{ asset('bundles/travel/css/materialize.min.css') }}" media="screen,projection">
+                <link type="text/css" rel="stylesheet" href="{{ asset('bundles/travel/css/main.css') }}">
+            {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <!-- jQuery is required by Materialize to function -->
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript offline Materialize -->
+
+        <script type="text/javascript" src="{{ asset('bundles/travel/js/materialize.min.js') }}"></script>
     </body>
 </html>

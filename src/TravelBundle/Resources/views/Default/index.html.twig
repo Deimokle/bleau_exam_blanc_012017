@@ -1,1 +1,33 @@
-Hello World!
+{%extends 'base.html.twig'%}
+{% block title %}Homepage{% endblock %}
+
+
+{% block body %}
+
+    <h1 class="center-align">Listings :</h1>
+
+    <table class="bordered highlight responsive-table centered">
+        <thead>
+        <tr>
+            <th data-field="h">Hotel</th>
+            <th data-field="r">Capacity</th>
+            <th data-field="p">Reserver</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        {#{% for room in hotel %}#}
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+
+            </tr>
+        {#{% endfor %}#}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+
