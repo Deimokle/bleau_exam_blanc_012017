@@ -22,6 +22,7 @@ class DefaultController extends Controller
 //          select hotel.name, count(room.id) from room, hotel where room.hotel_id = hotel.id group by hotel_id
 //
 //          select hotel.name, count(room.id) from room, hotel where room.hotel_id = hotel.id and room.book = 0 group by hotel_id
+//        select hotel.*, count(room.id) from room, hotel where room.hotel_id = hotel.id and room.book = 0 group by hotel_id
 
         return $this->render('@Travel/Default/index.html.twig',array('rooms'=>$rooms));
     }
