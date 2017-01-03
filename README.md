@@ -1,23 +1,24 @@
+# README
 
-Projet Exam blanc PHP
-==========
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Procédure d'installation - Symfony 3.1
+Things you may want to cover:
 
-#### Récupération du projet
-```
-git clone https://github.com/WildCodeSchool/exam_blanc_php.git
-```
-#### On se déplace dans le dossier du projet
-```
-cd exam_blanc_php
-```
-#### Installation du projet
-```
-composer install
-```
-#### Installation des assets
-```
-php bin/console assets:install 
-```
+* Ruby version
 
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,0 +1,15 @@
+<p>Premier exo</p>
+
+<%= form_tag exo1_path, method: :get do %>
+	<%= text_field_tag :text %>
+	<%= submit_tag 'envoyer' %>
+<% end %>
+
+<p>Deuxième exo</p>
+
+<%= form_tag exo2_path, method: :get do %>
+	<%= text_field_tag :text %>
+	<%= submit_tag 'envoyer' %>
+<% end %>
+
+<%= link_to 'homepage', root_path %>

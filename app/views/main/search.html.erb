@@ -1,0 +1,10 @@
+<div>
+	<%= link_to 'retourner à la page précédente', root_path %>
+</div>
+
+<p>ces hotels pourraient vous convenir :</p>
+<% @results.each do |r| %>
+	<div>
+		<%= r.name %>
+	</div>
+<% end %>

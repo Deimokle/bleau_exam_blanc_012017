@@ -1,0 +1,10 @@
+<p> combien de chambres souhaitez-vous réserver ? </p>
+
+<%= form_tag search_path, method: :get do %>
+	<%= text_field_tag :nb_rooms %>
+	<%= submit_tag 'envoyer' %>
+<% end %>
+
+<div>
+	<%= link_to 'algo', algo_path %>
+</div>
