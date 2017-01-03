@@ -16,7 +16,15 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $RAW_QUERY = 'select hotel.*, count(room.id) from room, hotel where room.hotel_id = hotel.id and room.book = 0 group by hotel_id LIMIT 15
+        $nbchb = $_POST['nbchambre'];
+        $nbpers = $_POST['nbPers'];
+
+        $resa = $nbchb * $nbpers;
+//        var_dump($nbchb);
+//        var_dump($nbpers);
+//        var_dump($resa);
+
+        $RAW_QUERY = 'select hotel.*, count(room.id) AS total from room, hotel where room.hotel_id = hotel.id and room.book = 0 and hotel.capacity >= '. $resa .' group by hotel_id
 ';
 
         $statement = $em->getConnection()->prepare($RAW_QUERY);
@@ -24,7 +32,8 @@ class DefaultController extends Controller
 
         $result = $statement->fetchAll();
 
-//        var_dump($result);
+
+
 
         return $this->render('@Travel/Default/result.html.twig', array('hotels'=>$result));
     }
