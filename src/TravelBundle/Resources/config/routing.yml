@@ -1,3 +1,7 @@
 travel_homepage:
     path:     /
     defaults: { _controller: TravelBundle:Default:index }
+
+travel_hotel:
+    path:     /hotel
+    defaults: { _controller: TravelBundle:Search:hotel }

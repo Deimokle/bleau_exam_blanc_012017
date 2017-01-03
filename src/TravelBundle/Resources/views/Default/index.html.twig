@@ -5,6 +5,7 @@
    <div class="container">
       <div class="row">
          <div class="col s12">
+
             <table>
                <thead>
                   <td>Nom de l'hotel</td>
@@ -12,17 +13,34 @@
                   <td>Nb d'étoiles</td>
                </thead>
                <tbody>
-               {% for hotels in hotel %}
-                  <td>{{ hotel.name }}</td>
-                  <td>{{ hotel.capacity }}</td>
-                  <td>{{ hotel.stars }}</td>
-               {% endfor %}
+
+                  <div class="collection">
+                     {% for hotels in hotel %}
+                        <tr>
+                           {#<td><a href="{{ path('#modal1', { 'id': hotels.id }) }}" id="{{ hotels.id }}" class="collection-item">{{ hotels.name }}</a></td>#}
+                           <td><a href="{{ path('travel_hotel', { 'id': hotels.id }) }}" class="collection-item">{{ hotels.name }}</a></td>
+
+                           <td>{{ hotels.capacity }}</td>
+                           <td>{{ hotels.stars }}</td>
+                        </tr>
+                     {% endfor %}
+                  </div>
+
                </tbody>
             </table>
 
          </div>
-
       </div>
+   </div>
 
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+         <h4>Modal Header</h4>
+         <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
    </div>
 {% endblock %}
