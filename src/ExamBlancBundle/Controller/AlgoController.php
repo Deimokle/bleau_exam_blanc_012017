@@ -33,10 +33,10 @@ class AlgoController extends Controller
         foreach ($tab as $key => $value)
         {
             if ($value['qty']>=3) {
-                $ht = ($ht + ($value['price_ht'] * $value['qty'] * 0.95));
+                $ht = ($ht + (($value['price_ht'] * $value['qty']) * 0.95));
             }
             elseif ($value['qty']>=10) {
-                $ht = (($ht + $value['price_ht'] * $value['qty'] * 0.90));
+                $ht = ($ht + (($value['price_ht'] * $value['qty']) * 0.90));
             }
             else {
                 $ht = ($ht + $value['price_ht'] * $value['qty']);
