@@ -17,7 +17,7 @@
                   <div class="collection">
                      {% for hotels in hotel %}
                         <tr>
-                           {#<td><a href="{{ path('#modal1', { 'id': hotels.id }) }}" id="{{ hotels.id }}" class="collection-item">{{ hotels.name }}</a></td>#}
+                           {#<td><a class="modal-trigger" data-target="#modal1" href="#modal1{{ {'id': hotels.id}  }}" id="{{ hotels.id }}" class="collection-item">{{ hotels.name }}</a></td>#}
                            <td><a href="{{ path('travel_hotel', { 'id': hotels.id }) }}" class="collection-item">{{ hotels.name }}</a></td>
 
                            <td>{{ hotels.capacity }}</td>
@@ -33,14 +33,49 @@
       </div>
    </div>
 
-   <!-- Modal Structure -->
-   <div id="modal1" class="modal bottom-sheet">
-      <div class="modal-content">
-         <h4>Modal Header</h4>
-         <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-      </div>
-   </div>
+   <!-- Modal Structure ESSAIE ENVOIE DONNEE SUR LA MODAL ???? -->
+
+   {#<div id="modal1" class="modal bottom-sheet">#}
+      {#<div class="modal-content">#}
+         {#<div class="left">#}
+            {#<h5>{{ donnee.name }}</h5>#}
+            {#<p>{{ donnee.capacity }} <span>chambres</span></p>#}
+            {#<p>étoiles : <span>{{ donnee.stars }}</span></p>#}
+         {#</div>#}
+      {##}
+         {#<div class="col s6 center">#}
+            {#<p>{{ donnee.address }}</p>#}
+            {#<p>{{ donnee.phone }}</p>#}
+            {#<p>{{ donnee.email }}</p>#}
+            {#<p><a href="{{ donnee.website }}">{{ donnee.website }}</a></p>#}
+         {#</div>#}
+
+          {#<div class="col s6 center">#}
+          {#<table>#}
+          {#<tr>#}
+          {#<td>numéro de chambre</td>#}
+          {#<td>capacité</td>#}
+          {#<td>livres</td>#}
+          {#</tr>#}
+          {#{% for room in donnee %}#}
+
+          {#<tr>#}
+          {#<td>{{ room.room_number }}</td>#}
+          {#<td>{{ room.capacity }}</td>#}
+          {#<td>{{ room.book }}</td>#}
+          {#</tr>#}
+
+          {#{% endfor %}#}
+          {#</table>#}
+          {#</div>#}
+
+         {#</div>#}
+         {#</div>#}
+         {#</div>#}
+      {#</div>#}
+      {#<div class="modal-footer">#}
+         {#<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>#}
+      {#</div>#}
+   {#</div>#}
+
 {% endblock %}

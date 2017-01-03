@@ -2,16 +2,50 @@
 
 {% block body%}
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
+    {#<div id="modal1" class="modal bottom-sheet">#}
+        {#<div class="modal-content">#}
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        {#{{ dump(donnee.stars) }}#}
 
-                <div class="left">
-                    <h5>{{  }}</h5>
+                        <div class="left">
+                            <h5>{{ donnee.name }}</h5>
+                            <p>{{ donnee.capacity }} <span>chambres</span></p>
+                            <p>étoiles : <span>{{ donnee.stars }}</span></p>
+                        </div>
+
+                        <div class="col s6 center">
+                            <p>{{ donnee.address }}</p>
+                            <p>{{ donnee.phone }}</p>
+                            <p>{{ donnee.email }}</p>
+                            <p><a href="{{ donnee.website }}">{{ donnee.website }}</a></p>
+                        </div>
+
+                        {#<div class="col s6 center">#}
+                            {#<table>#}
+                                {#<tr>#}
+                                    {#<td>numéro de chambre</td>#}
+                                    {#<td>capacité</td>#}
+                                    {#<td>livres</td>#}
+                                {#</tr>#}
+                                {#{% for room in donnee %}#}
+
+                                    {#<tr>#}
+                                        {#<td>{{ room.room_number }}</td>#}
+                                        {#<td>{{ room.capacity }}</td>#}
+                                        {#<td>{{ room.book }}</td>#}
+                                    {#</tr>#}
+
+                                {#{% endfor %}#}
+                            {#</table>#}
+                        {#</div>#}
+
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </div>
+        {#</div>#}
+    {#</div>#}
+
 
 {% endblock %}
