@@ -1,0 +1,3 @@
+travel_homepage:
+    path:     /travel
+    defaults: { _controller: TravelBundle:Default:index }
