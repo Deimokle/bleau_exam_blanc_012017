@@ -1,5 +1,83 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-zdfgh
+
+    <div class="container center-block">
+
+        <h1 style="text-align: center; color: steelblue">Bienvenue sur le site de "Book ta chambre !"</h1>
+
+        <h2 style="text-align: center">Reservation de chambre</h2>
+        <BR/>
+        <BR/>
+
+        <div class="container-center">
+            <h3>Selectionne le nombre de chambre pour 2 personnes</h3>
+                <select class="selectpicker">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+        </div>
+
+        <div class="container-center">
+            <h3>Selectionne le nombre de chambre pour 3 personnes</h3>
+        <div class="form-group">
+            <select id="lstProvince" class="selectpicker" title="" data-width="250px" data-live-search="false">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        </div>
+
+        {#<div class="col-md-5">#}
+
+            {#<form action="{{ path('') }}" method="post">#}
+                {#<select class="form-control">#}
+                    {#{% for hotel in hotels %}#}
+                        {#<option>{{ hotel.id }}</option>#}
+                    {#{% endfor %}#}
+                {#</select>#}
+
+        {#</div>#}
+
+
+        {#<div class="col-md-12">#}
+            {#<input type="submit" class="btn btn-info" style="width: 100%" value="Reserver">#}
+        {#</div>#}
+        {#</form>#}
+    {#</div>#}
+    {#<BR/>#}
+    {#<BR/>#}
+
+    {#<div class="container">#}
+        {#<h3>Chambre :</h3>#}
+
+        {#<table class="table table-bordered">#}
+            {#<thead>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<th>Nombre</th>#}
+            {#</tr>#}
+            {#</thead>#}
+            {#<tbody>#}
+            {#{% for room in rooms %}#}
+                {#<tr>#}
+                    {#<td><a href="{{ path('', { '': room.id }) }}">{{ room.id }}</a></td>#}
+                    {#<td>{{ room.room_number }}</td>#}
+                    {#<td>{{ room.capacity }}</td>#}
+                {#</tr>#}
+            {#{% endfor %}#}
+            {#</tbody>#}
+        {#</table>#}
+
+
+        {#<a class="btn btn-info" href="{{ path('') }}">Create a new personnage</a>#}
+        {#<BR/>#}
+        {#<BR/>#}
+
+    </div>
+
 {% endblock %}
+
+

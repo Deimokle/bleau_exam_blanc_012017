@@ -17,14 +17,17 @@ class AlgoController extends Controller
         $tableau = strtolower($str);
         $tab = str_split($tableau);
         $tabletters = [];
-        foreach ($tab as $char) {
-            if (ctype_alnum($char) === true) {
-                $tabletters[] = $char;
+        foreach ($tab as $string) {
+            if (ctype_alnum($string) == true) {
+                $tabletters[] = $string;
             }
         }
         sort($tabletters);
         $result = array_count_values($tabletters);
         return $result;
+
+
+
 
 //        $tableau=str_split(strtolower($str));
 //
