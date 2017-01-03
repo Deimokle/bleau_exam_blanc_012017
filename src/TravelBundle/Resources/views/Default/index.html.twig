@@ -10,24 +10,19 @@
 {% block body %}{{ parent() }}
 
     <div class="container">
-     
-        
 
 
-        <form class="well">
+
+
+        <form class="well" method="post">
             <div class="form-group">
+                <legend class="Jumbotron">Réservation de chambre</legend>
+                Nombre de chambres à louer : <input type="number" autofocus="autofocus" required="true">
 
-            <legend class="Jumbotron">Réservation de chambre</legend>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-primary" href="{{ path('hotel_index') }}" >Envoyer</a></li>
+                </ul>
 
-            Nombre de chambres à louer : <input type="number" autofocus="autofocus" required="true">
-
-
-        
-            
-            <ul class="list-unstyled">
-                <li><a class="btn btn-primary" href="{{ path('hotel_index') }}" >Envoyer</a></li>
-            </ul>
-          
             </div>
 
         </form>
