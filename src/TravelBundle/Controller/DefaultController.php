@@ -16,7 +16,7 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $RAW_QUERY = 'select hotel.name, count(room.id) from room, hotel where room.hotel_id = hotel.id and room.book = 0 group by hotel_id
+        $RAW_QUERY = 'select hotel.*, count(room.id) from room, hotel where room.hotel_id = hotel.id and room.book = 0 group by hotel_id LIMIT 15
 ';
 
         $statement = $em->getConnection()->prepare($RAW_QUERY);
@@ -24,8 +24,8 @@ class DefaultController extends Controller
 
         $result = $statement->fetchAll();
 
-        var_dump($result);
+//        var_dump($result);
 
-        return $this->render('@Travel/Default/result.html.twig');
+        return $this->render('@Travel/Default/result.html.twig', array('hotels'=>$result));
     }
 }

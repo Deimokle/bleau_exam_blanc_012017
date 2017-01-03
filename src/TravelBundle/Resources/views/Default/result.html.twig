@@ -1,11 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
+    <div class="container-fluid">
         <h1>Résultats : </h1>
 
 
+        <p> Les hôtels ayant des chambres disponibles en ce moment : </p>
 
+            {% for hotel in hotels  %}
 
+                <table class="table table-bordered">
+                    <tr>
+                        <td style="width: 25%">{{ hotel.name }}</td>
+                        <td style="width: 10%">{{ hotel.address }}</td>
+                        <td style="width: 10%">{{ hotel.zipcode }}</td>
+                        <td style="width: 10%">{{ hotel.city }}</td>
+                        <td style="width: 20%">{{ hotel.website }}</td>
+                        <td style="width: 5%">{{ hotel.stars }}</td>
+                    </tr>
+                </table>
+
+                {% endfor %}
     </div>
 {% endblock %}
