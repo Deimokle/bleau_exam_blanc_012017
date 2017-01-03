@@ -1,0 +1,12 @@
+hotel_index:
+    path:     /
+    defaults: { _controller: "TravelBundle:Hotel:index" }
+    methods:  GET
+
+hotel_show:
+    path:     /{id}/show
+    defaults: { _controller: "TravelBundle:Hotel:show" }
+    methods:  GET
+
+
+

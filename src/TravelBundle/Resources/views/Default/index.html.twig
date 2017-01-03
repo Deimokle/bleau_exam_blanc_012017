@@ -1,0 +1,33 @@
+{# src/TravelBundle/Resources/views/index.html.twig #}
+
+
+{% extends "TravelBundle::layout.html.twig" %}
+
+
+{% block title %}{{ parent() }} - plateforme {% endblock %}
+
+
+{% block body %}{{ parent() }}
+
+    <div class="container">
+     
+        
+
+
+        <form class="well">
+            <div class="form-group">
+
+            <legend class="Jumbotron">Réservation de chambre</legend>
+
+            Nombre de chambres à louer : <input type="text">
+
+
+            <button >Envoyer</button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+{% endblock %}
