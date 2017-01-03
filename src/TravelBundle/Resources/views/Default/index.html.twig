@@ -19,10 +19,15 @@
 
             <legend class="Jumbotron">Réservation de chambre</legend>
 
-            Nombre de chambres à louer : <input type="text">
+            Nombre de chambres à louer : <input type="number" autofocus="autofocus" required="true">
 
 
-            <button >Envoyer</button>
+        
+            
+            <ul class="list-unstyled">
+                <li><a class="btn btn-primary" href="{{ path('hotel_index') }}" >Envoyer</a></li>
+            </ul>
+          
             </div>
 
         </form>
