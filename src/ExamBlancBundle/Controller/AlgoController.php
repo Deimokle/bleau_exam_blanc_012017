@@ -13,8 +13,12 @@ class AlgoController extends Controller
     // Exercice 1
     public function number_of_char($str)
     {
-
-
+        $spechar = str_replace(".", "-", $str);
+        $phrase = preg_replace('/([^.a-z0-9]+)/i',"",$spechar);
+        $phrase2 = str_split(strtolower($phrase));
+        $result = array_count_values($phrase2);
+        asort($result);
+        return($result);
     }
 
     // Exercice 2
@@ -24,3 +28,6 @@ class AlgoController extends Controller
 
     }
 }
+
+
+
