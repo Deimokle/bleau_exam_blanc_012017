@@ -11,8 +11,17 @@ class DefaultController extends Controller
         return $this->render('TravelBundle:Default:index.html.twig');
     }
 
-    public function hotelsAction()
+    public function dispoAction()
     {
-        return $this->render('TravelBundle:Default:hotels.html.twig');
+        $nbroom = $_POST['nbChambre'];
+        $em = $this->getDoctrine()->getManager();
+        $hotels = $em->getRepository('TravelBundle:Hotel')->findAll();
+        $rooms = $em->getRepository('TravelBundle:Room')->findBy(array('book' => 0));
+        return $this->render('@Travel/hotels.html.twig', array(
+            'nbChambre' => $nbroom,
+            'rooms' => $rooms,
+            'hotels' => $hotels,
+        ));
     }
+
 }

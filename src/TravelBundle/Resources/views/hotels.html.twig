@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h4 class="blue-text center">Travel vous propose</h4>
+
+    <p class="center">Le nombre de chambres que vous souhaitez dans les hôtels suivants :</p>
+
+    <table class="bordered highlight centered responsive">
+        <thead>
+        <tr>
+            <th data-field="id">Nom de l'hôtel</th>
+            <th data-field="name">Adresse</th>
+            <th data-field="name">CP</th>
+            <th data-field="name">Ville</th>
+            <th data-field="name">Téléphone</th>
+            <th data-field="name">Mail</th>
+            <th data-field="name">Site internet</th>
+            <th data-field="name">Etoiles</th>
+            <th data-field="name">Capacité</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for hotel in hotels  %}
+
+        <tr>
+            <td>{{ hotel.name }}</td>
+            <td>{{ hotel.address }}</td>
+            <td>{{ hotel.zipcode }}</td>
+            <td>{{ hotel.city }}</td>
+            <td>{{ hotel.phone }}</td>
+            <td>{{ hotel.email }}</td>
+            <td>{{ hotel.website }}</td>
+            <td>{{ hotel.stars }}</td>
+            <td>{{ nbChambre }}</td>
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

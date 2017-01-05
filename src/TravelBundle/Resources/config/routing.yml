@@ -1,3 +1,7 @@
 travel_homepage:
     path:     /travel
     defaults: { _controller: TravelBundle:Default:index }
+
+travel_dispo:
+    path: /disponibilite
+    defaults: { _controller: TravelBundle:Default:dispo }
